@@ -217,8 +217,6 @@ p {
     filter: blur(5px); 
 }
 
-
-
 .desctiption__title {
     text-transform: uppercase;   
 }
@@ -251,6 +249,14 @@ p {
 
 /* Factions
 ===========================================*/
+
+.factions__title::after {
+    display: block;
+    margin-top: 10px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
 
 .factions {
     display: flex;
