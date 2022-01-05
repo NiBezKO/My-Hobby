@@ -1,0 +1,664 @@
+body {
+    margin: 0;
+    font-size: 17px;
+    font-family: 'Gothic';
+    color: #6c7279;
+    background-color: rgb(92, 72, 72);
+    background: url(../img/Dante.jpg) center ;
+    background-attachment: fixed;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+
+/* Container
+====================================================*/
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* header
+====================================================*/
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+   
+}
+
+.header.black {
+    background-color: black;
+    transition: 1.5;
+}
+
+
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #7a3939d3;
+    padding: 35px 0;
+}
+
+
+.header__logo {
+    padding-left: 80px;
+}
+
+
+/* Nav
+======================================================*/
+
+.hobby__nav {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+}
+
+
+.nav__link:first-child {
+    margin-left: 0;
+}
+
+.menu__link {
+    display: flex;
+    list-style-type: none;
+}
+
+.nav__link {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: rgb(209, 37, 37);
+    text-decoration: none;
+    opacity: 0.75;
+    font-family: 'Gothic';
+    transition: opacity .1s linear;
+}
+
+.nav__link:hover {
+    opacity: 1;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+
+
+/* Intro
+===================*/
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 1042px;
+    padding-top: 100px;
+
+    background: #949494 url("../img/bg.png") center no-repeat;
+    background-size: cover;
+    
+}
+
+.intro__inner {
+    width: 100%;
+    max-width: 970px;
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.intro__title {
+    margin: 0 0 30px;
+
+    font-family: 'Gothic';
+    font-size: 65px;
+    line-height: 1.1;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.intro__subtitle {
+    margin-bottom: 60px;
+
+    font-size: 22px;
+    color: #fff;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Button
+======================================================*/
+
+.Button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 14px 40px;
+    border-radius: 3px;
+    border: 0;
+    cursor: pointer;
+    font-family: 'Raleway',sans-serif;
+    font-size: 13px;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .1s linear;
+}
+
+.Button--red {
+    background-color: rgb(190, 169, 50);
+}
+
+.Button--red:hover {
+    background-color:#271313;
+}
+
+/* Description
+=============================================================*/
+
+.description {
+    position: relative;
+    width: 100%;
+    height: auto;
+    
+    
+}
+
+/* Title-Inner 
+=================================================*/
+
+
+.title__inner {
+    padding: 50px 0;
+    text-align:center;
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    font-family: 'Gothic';
+    text-transform: uppercase;
+}
+
+/*===============================================*/
+
+
+.description::before {
+    content: '';
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    top: 0; 
+    bottom: 0; 
+    z-index: -1; 
+    background: url('../img/siege.jpg') center no-repeat;
+    background-size: cover;
+    filter: blur(5px); 
+}
+
+
+
+.desctiption__title {
+    text-transform: uppercase;   
+}
+
+.description__title::after {
+    display: block;
+    margin-top: 10px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.description__text {
+    font-family: 'Gothic';
+    font-size: 20px;
+    font-weight: 600;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    line-height: 1.5;
+    color: black;
+    text-align: center;
+    font-style: italic;
+}
+
+.akvilla__bottom {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+}
+
+/* Factions
+===========================================*/
+
+.factions {
+    display: flex;
+    flex-wrap: wrap;
+}
+   
+.factions__item {
+    position: relative;
+    height: 360px;
+    width: 25%;
+    overflow: hidden;
+    cursor: pointer; 
+}
+
+.factions__item:hover .factions__content {
+    opacity: 1;
+}
+   
+.factions__img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    opacity: 0.7;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.factions__content {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+    justify-content:  center;
+    text-align: center;
+    background-color: rgba(232, 69, 69, .9);
+}
+
+.factions__name {
+    text-transform: uppercase;
+    font-family: 'Gothic';
+    font-size: 15px;
+    color: black;
+    font-weight: 700;
+}
+   
+.factions__text {
+    padding-top: 10px;
+    font-family: 'Raleway';
+    font-weight: 600;
+    color: white;
+}
+
+/*  BOOKS 
+====================================================*/
+
+.books {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 25px 0;
+    color: #fff;
+}
+
+.books__img {
+    position: relative;
+}
+
+.books__description {
+    padding: 60px 50px ;
+}
+
+.books__title {
+    font-family: 'Gothic';
+    font-size: 30px;
+    text-align: center;
+    color: white;
+    padding-bottom: 15px;
+}
+
+.clarification {
+    font-family: 'Gothic';
+    line-height: 1.5;
+    font-size: 20px;
+    padding-bottom: 40px;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+}
+
+/* Fan-arts 
+==========================================*/
+
+/* Slider
+==============================================*/
+
+.slider {
+    max-width: 100%;
+  }
+
+  
+  .slider__items {
+    counter-reset: slide;
+  }
+
+  .slider__item {
+    position: relative;
+    counter-increment: slide;
+  }
+
+  .slider__item::after {
+    content: counter(slide);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #fff;
+    font-style: italic;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .img-fluid {
+    display: inline-block;
+    height: auto;
+    max-width: 100%;
+  }
+
+/*===================================================*/
+
+.gallery__arts {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.gallery__inner {
+    width: 33%;
+    height: 500px;
+    overflow: hidden;
+}
+
+.arts__img {
+    top: 20%;
+    left: 20%;
+    transform: translate3d(-20%, -20%, 0);    
+}
+
+.arts__img {
+    transition: 1s; /* Время эффекта */
+}
+
+.arts__img:hover {
+    transform: scale(1.2); /* Увеличиваем масштаб */
+}
+
+/* Miniatures 
+======================================*/
+
+
+.paint__information {
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-family: 'Gothic';
+    line-height: 1.5;
+    font-size: 17px;
+    font-weight: 600;
+    font-style: italic;
+    color: rgb(194, 190, 190);
+}
+
+.paint__title {
+    margin: 30px 0;
+    text-align: center;
+    font-family: 'Gothic';
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.video {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+/* Form submit
+=========================================*/
+
+.submit__title {
+    text-align: center;
+    font-family: 'Gothic';
+    font-weight: 15px;
+    margin: 40px 0;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.form__sub {
+    position: relative;
+    width: 600px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.input__email {
+    width: 100%;
+    height: 40px;
+    border: #fff;
+    outline: #fff;
+    border-radius: none;
+    font-family: 'Gothic';
+    font-size: 19px;
+    color: black;
+}
+
+.button__submit {
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-family: 'Gothic';
+    font-size: 19px;
+    border: none;
+    background: #a52c07;
+    
+    cursor: pointer;
+}   
+
+/* Footer 
+===============================*/
+
+.footer {
+    width: auto;
+    
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+}
+
+.footer__logo {
+    padding: 50px 0;
+}
+
+
+@media (max-width: 1200px) {
+
+    /* Header */
+
+    .header {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 990px) {
+
+    .header {
+        padding-right: 50px;
+        background-color: black;
+    }
+    
+    /* Nav */
+
+    .hobby__nav  {
+        display: none;
+        position: absolute;
+    }
+
+    /* Burger-menu*/
+
+    .hobby__nav._active {
+        display: block;
+        background-color: black;
+        margin: 50px 100px 25px 25px;
+        width: auto;
+        right: 0;
+        text-align: center;
+        z-index: 1;
+    }
+
+    .menu__link {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .nav__link {
+        margin-bottom: 15px;
+    }
+
+    .burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 18px;
+        z-index: 5;
+    }
+
+    .burger span,
+    .burger::before,
+    .burger::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        transition: all .2s linear;
+        background-color: #fff;
+    }
+
+    .burger::before,
+    .burger::after {
+        content: "";
+    }
+
+    .burger::before {
+        top: 0;
+    }
+    
+    .burger::after{
+        bottom: 0;
+    }
+
+    .burger span {
+        top: 50%;
+        transform: translate(0px, -50%)
+    }
+
+    /* Factions */
+
+    .factions__item {
+        width: 50%;
+    }
+
+    /* block__books */
+
+    .books {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        height: auto;
+    }
+
+    /* Fan-Arts */
+    
+    .gallery__arts {
+        display: flex;
+        justify-content: center;
+    }
+
+    .gallery__inner {
+        width: 50%;
+    }
+    
+    /* Form submit */
+    
+    .form__sub {
+        width: 100%;
+    }
+    
+
+}
+
+@media (max-width: 600px) {
+         
+    /* Intro */
+
+    .intro__title {
+        font-size: 35px;
+    }
+    
+    /* Fan-Arts */
+
+    .gallery__arts {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        flex-direction: column;
+    }
+
+    .gallery__inner {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    /* Header */
+
+    .header__logo {
+        padding-left: 15px;
+    }
+
+    /* Factions */
+
+    .factions__item {
+        width: 100%;
+    }
+}
+
+
+    
+
+
+
