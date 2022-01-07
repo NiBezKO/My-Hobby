@@ -241,6 +241,16 @@ p {
     font-style: italic;
 }
 
+.description__text::before,
+.description__text::after {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
 .akvilla__bottom {
     display: block;
     margin-left: auto;
@@ -317,6 +327,14 @@ p {
 /*  BOOKS 
 ====================================================*/
 
+.block__title::after {
+    display: block;
+    margin-top: 10px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
 .books {
     display: flex;
     justify-content: center;
@@ -342,6 +360,14 @@ p {
     padding-bottom: 15px;
 }
 
+.books__title::before {
+    display: block;
+    margin-bottom: 15px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
 .clarification {
     font-family: 'Gothic';
     line-height: 1.5;
@@ -351,27 +377,43 @@ p {
     color: rgb(255, 255, 255);
 }
 
+.clarification::after {
+    display: block;
+    margin-top: 15px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
 /* Fan-arts 
 ==========================================*/
+
+.fan-arts__title::after {
+    display: block;
+    margin-top: 20px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
 
 /* Slider
 ==============================================*/
 
 .slider {
     max-width: 100%;
-  }
+}
 
   
-  .slider__items {
+.slider__items {
     counter-reset: slide;
-  }
+}
 
-  .slider__item {
+.slider__item {
     position: relative;
     counter-increment: slide;
-  }
+}
 
-  .slider__item::after {
+.slider__item::after {
     content: counter(slide);
     position: absolute;
     top: 10px;
@@ -380,13 +422,13 @@ p {
     font-style: italic;
     font-size: 32px;
     font-weight: bold;
-  }
+}
 
-  .img-fluid {
+.img-fluid {
     display: inline-block;
     height: auto;
     max-width: 100%;
-  }
+}
 
 /*===================================================*/
 
@@ -419,6 +461,13 @@ p {
 /* Miniatures 
 ======================================*/
 
+.miniatures__title::after {
+    display: block;
+    margin-top: 20px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
 
 .paint__information {
     text-align: center;
@@ -429,6 +478,15 @@ p {
     font-weight: 600;
     font-style: italic;
     color: rgb(194, 190, 190);
+}
+
+.paint__information::before,
+.paint__information::after {
+    display: block;
+    margin-top: 20px;
+    content: '';
+    width: 100%;
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
 
 .paint__title {
