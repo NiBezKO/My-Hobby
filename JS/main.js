@@ -1,4 +1,4 @@
-/* добавление класса .black шапке сайта при скролле вниз */
+/* add class header__black */
 
 const header = document.querySelector ("header");
 
@@ -10,11 +10,10 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.remove('black');
     }
-     
-    console.log(scrollPos)   
+  
 });
 
-/* выпадающее меню */
+/* Burger */
 
 const burger = document.querySelector (".burger");
 const dropMenu = document.querySelector (".hobby__nav")
@@ -24,7 +23,7 @@ const dropMenu = document.querySelector (".hobby__nav")
      dropMenu.classList.toggle('_active');
 });
 
-/* Меню Навигации */
+/* Menu Navigation */
 
 const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
 if (menuLinks.length > 0) {
@@ -57,3 +56,13 @@ document.addEventListener('DOMContentLoaded', function () {
       interval: 5000,
     });
   });
+
+/* Button show arts */
+
+const btnDown = document.querySelector (".show__arts");
+const art = document.querySelector (".gallery__arts");
+
+btnDown.addEventListener ('click', function() {
+    btnDown.classList.toggle('_active');
+    art.classList.toggle('_active');
+});

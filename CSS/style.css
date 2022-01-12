@@ -3,6 +3,7 @@ body {
     font-size: 17px;
     font-family: 'Gothic';
     color: #6c7279;
+    text-align: center;
     background-color: rgb(92, 72, 72);
     background: url(../img/Dante.jpg) center ;
     background-attachment: fixed;
@@ -115,7 +116,6 @@ p {
     justify-content: center;
     height: 1042px;
     padding-top: 100px;
-
     background: #949494 url("../img/bg.png") center no-repeat;
     background-size: cover;
     
@@ -125,13 +125,11 @@ p {
     width: 100%;
     max-width: 970px;
     margin: 0 auto;
-
     text-align: center;
 }
 
 .intro__title {
     margin: 0 0 30px;
-
     font-family: 'Gothic';
     font-size: 65px;
     line-height: 1.1;
@@ -142,7 +140,6 @@ p {
 
 .intro__subtitle {
     margin-bottom: 60px;
-
     font-size: 22px;
     color: #fff;
     line-height: 1.5;
@@ -183,8 +180,6 @@ p {
     position: relative;
     width: 100%;
     height: auto;
-    
-    
 }
 
 /* Title-Inner 
@@ -221,12 +216,17 @@ p {
     text-transform: uppercase;   
 }
 
-.description__title::after {
+.description__title::before {
     display: block;
     margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .description__text {
@@ -244,11 +244,15 @@ p {
 .description__text::before,
 .description__text::after {
     display: block;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .akvilla__bottom {
@@ -260,12 +264,17 @@ p {
 /* Factions
 ===========================================*/
 
-.factions__title::after {
+.factions__title::before {
     display: block;
     margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .factions {
@@ -290,7 +299,6 @@ p {
     left: 50%;
     top: 50%;
     z-index: 1;
-    opacity: 0.7;
     transform: translate3d(-50%, -50%, 0);
 }
 
@@ -306,6 +314,7 @@ p {
     opacity: 0;
     justify-content:  center;
     text-align: center;
+    font-family: 'Gothic';
     background-color: rgba(232, 69, 69, .9);
 }
 
@@ -327,12 +336,17 @@ p {
 /*  BOOKS 
 ====================================================*/
 
-.block__title::after {
+.block__title::before {
     display: block;
     margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .books {
@@ -362,10 +376,15 @@ p {
 
 .books__title::before {
     display: block;
-    margin-bottom: 15px;
+    margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .clarification {
@@ -379,21 +398,31 @@ p {
 
 .clarification::after {
     display: block;
-    margin-top: 15px;
+    margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #1f1209;
+	box-shadow: 0 20px 20px -20px #333;
 }
 
 /* Fan-arts 
 ==========================================*/
 
-.fan-arts__title::after {
+.fan-arts__title::before {
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 /* Slider
@@ -401,6 +430,7 @@ p {
 
 .slider {
     max-width: 100%;
+    padding-bottom: 45px;
 }
 
   
@@ -432,41 +462,87 @@ p {
 
 /*===================================================*/
 
+.show__arts {
+    display: inline-block;
+    position: relative;
+    background-color: #610404;
+    border: none;
+    padding: 35px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.show__arts:after {
+    position: absolute;
+    top: 25px;;
+    left: 25px;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transform: rotate(315deg);
+}
+
+.show__arts {
+    transition: 1s; 
+}
+
+.show__arts:hover {
+    transform: scale(1.2); 
+}
+
 .gallery__arts {
+    display: none;
+}
+
+.gallery__arts._active {
+    display: block;
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
+    justify-content: center;
 }
 
 .gallery__inner {
-    width: 33%;
+    width: 25%;
     height: 500px;
     overflow: hidden;
 }
 
 .arts__img {
-    top: 20%;
-    left: 20%;
-    transform: translate3d(-20%, -20%, 0);    
+    top: 35%;
+    left: 35%;
+    transform: translate3d(-20%, -20%, 0);  
 }
 
 .arts__img {
-    transition: 1s; /* Время эффекта */
+    transition: 1s; 
 }
 
 .arts__img:hover {
-    transform: scale(1.2); /* Увеличиваем масштаб */
+    transform: scale(1.2); 
 }
 
 /* Miniatures 
 ======================================*/
 
-.miniatures__title::after {
+.miniatures__title::before {
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .paint__information {
@@ -483,10 +559,15 @@ p {
 .paint__information::before,
 .paint__information::after {
     display: block;
-    margin-top: 20px;
+    margin-top: 10px;
     content: '';
     width: 100%;
-    border-bottom: 2px solid rgb(255, 255, 255);
+    margin: -30px auto 10px;
+	padding: 0;
+	height: 50px;
+	border: none;
+	border-bottom: 2px solid #000000;
+	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
 .paint__title {
@@ -505,6 +586,19 @@ p {
     
 }
 
+
+
+/* Footer 
+===============================*/
+
+.footer {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    border-top: 1px solid #7a3939d3;
+}
+
 /* Form submit
 =========================================*/
 
@@ -512,7 +606,7 @@ p {
     text-align: center;
     font-family: 'Gothic';
     font-weight: 15px;
-    margin: 40px 0;
+    padding: 30px 0;
     text-transform: uppercase;
     color: #fff;
 }
@@ -521,7 +615,7 @@ p {
     position: relative;
     width: 600px;
     margin: 0 auto;
-    padding-bottom: 100px;
+    padding: 0 10px;
 }
 
 .input__email {
@@ -544,19 +638,11 @@ p {
     font-size: 19px;
     border: none;
     background: #a52c07;
-    
     cursor: pointer;
 }   
 
-/* Footer 
-===============================*/
-
-.footer {
-    width: auto;
-    
-    margin: 0 auto;
-    text-align: center;
-    background-color: black;
+.button__submit:hover {
+    background: #411d12;
 }
 
 .footer__logo {
@@ -665,7 +751,7 @@ p {
 
     /* Fan-Arts */
     
-    .gallery__arts {
+    .gallery__arts._active {
         display: flex;
         justify-content: center;
     }
@@ -693,7 +779,7 @@ p {
     
     /* Fan-Arts */
 
-    .gallery__arts {
+    .gallery__arts._active {
         display: flex;
         justify-content: center;
         align-items:center;
