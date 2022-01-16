@@ -521,7 +521,11 @@ p {
 ==============================================*/
 
 .slider {
+    position: relative;
+    overflow: hidden;
     max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 45px;
 }
 
