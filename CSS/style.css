@@ -5,7 +5,7 @@ body {
     color: #6c7279;
     text-align: center;
     background-color: rgb(92, 72, 72);
-    background: url(../img/Dante.jpg) center ;
+    background: url(../img/bg.png) center ; 
     background-attachment: fixed;
 }
 
@@ -49,7 +49,6 @@ p {
 
 .header.black {
     background-color: black;
-    transition: 1.5;
 }
 
 
@@ -111,14 +110,35 @@ p {
 ===================*/
 
 .intro {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 1042px;
+    height: 100vh;
     padding-top: 100px;
-    background: #949494 url("../img/bg.png") center no-repeat;
-    background-size: cover;
     
+    overflow: hidden;
+    
+}
+
+.intro__media {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.intro__media-video {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   min-width: 100%;
+   min-height: 100%;
+   object-fit: cover;
+   transform: translate(-50%, -50%);
+    z-index: -100;
 }
 
 .intro__inner {
@@ -126,6 +146,7 @@ p {
     max-width: 970px;
     margin: 0 auto;
     text-align: center;
+    z-index: 10;
 }
 
 .intro__title {
@@ -299,6 +320,7 @@ p {
     left: 50%;
     top: 50%;
     z-index: 1;
+    opacity: 0.7;
     transform: translate3d(-50%, -50%, 0);
 }
 
@@ -347,6 +369,75 @@ p {
 	border: none;
 	border-bottom: 2px solid #000000;
 	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
+}
+
+.autors {
+    display: grid;
+	column-gap: 30px;
+	row-gap: 50px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-bottom: 150px;
+}
+
+.autor {
+    display: grid;
+	grid-auto-flow: row;
+	grid-template: auto 1fr minmax(40px, auto) / 1fr;
+    text-align: center;
+}
+
+.autor__name {
+    font-family: 'Gothic';
+    color: #fff;
+    margin: 20px 0 ;
+}
+
+.autor__description {
+    font-family: 'Gothic';
+    color: #fff;
+}
+
+.show__book {
+    display: inline-block;
+    position: relative;
+    background-color: #000000;
+    border: none;
+    padding: 35px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.show__book:after {
+    position: absolute;
+    top: 25px;;
+    left: 25px;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-left: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px solid rgb(255, 255, 255);
+    transform: rotate(315deg);
+}
+
+.show__book {
+    transition: 1s; 
+}
+
+.show__book:hover {
+    transform: scale(1.2); 
+}
+
+.books__list {
+    display: none;
+}
+
+.books__list._active {
+    display: block;
 }
 
 .books {
@@ -462,10 +553,10 @@ p {
 
 /*===================================================*/
 
-.show__arts {
+.button__show {
     display: inline-block;
     position: relative;
-    background-color: #610404;
+    background-color: #000000;
     border: none;
     padding: 35px;
     text-align: center;
@@ -476,7 +567,7 @@ p {
     border-radius: 50%;
 }
 
-.show__arts:after {
+.button__show:after {
     position: absolute;
     top: 25px;;
     left: 25px;
@@ -489,11 +580,11 @@ p {
     transform: rotate(315deg);
 }
 
-.show__arts {
+.button__show {
     transition: 1s; 
 }
 
-.show__arts:hover {
+.button__show:hover {
     transform: scale(1.2); 
 }
 
@@ -507,6 +598,7 @@ p {
     flex-wrap: wrap;
     margin-top: 50px;
     justify-content: center;
+    transition: .1s;
 }
 
 .gallery__inner {
@@ -577,6 +669,7 @@ p {
     font-size: 20px;
     color: #fff;
     text-transform: uppercase;
+    font-size: 20px;
 }
 
 .video {
@@ -605,7 +698,7 @@ p {
 .submit__title {
     text-align: center;
     font-family: 'Gothic';
-    font-weight: 15px;
+    font-size: 15px;
     padding: 30px 0;
     text-transform: uppercase;
     color: #fff;
@@ -623,7 +716,6 @@ p {
     height: 40px;
     border: #fff;
     outline: #fff;
-    border-radius: none;
     font-family: 'Gothic';
     font-size: 19px;
     color: black;

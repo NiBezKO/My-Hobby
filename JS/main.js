@@ -55,14 +55,24 @@ document.addEventListener('DOMContentLoaded', function () {
       autoplay: true,
       interval: 5000,
     });
-  });
+});
+
+/* Button show book list */
+
+const btnBook = document.querySelector (".show__book");
+const list = document.querySelector (".books__list")
+
+btnBook.addEventListener ('click' , function () {
+    btnBook.classList.toggle ('_active');
+    list.classList.toggle ('_active');
+});
 
 /* Button show arts */
 
-const btnDown = document.querySelector (".show__arts");
+const btnShow = document.querySelector (".button__show");
 const art = document.querySelector (".gallery__arts");
 
-btnDown.addEventListener ('click', function() {
-    btnDown.classList.toggle('_active');
+btnShow.addEventListener ('click', function() {
+    btnShow.classList.toggle('_active');
     art.classList.toggle('_active');
 });
