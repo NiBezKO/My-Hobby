@@ -521,39 +521,8 @@ p {
 ==============================================*/
 
 .slider {
-    position: relative;
-    overflow: hidden;
     max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
     padding-bottom: 45px;
-}
-
-  
-.slider__items {
-    counter-reset: slide;
-}
-
-.slider__item {
-    position: relative;
-    counter-increment: slide;
-}
-
-.slider__item::after {
-    content: counter(slide);
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    color: #fff;
-    font-style: italic;
-    font-size: 32px;
-    font-weight: bold;
-}
-
-.img-fluid {
-    display: inline-block;
-    height: auto;
-    max-width: 100%;
 }
 
 /*===================================================*/
