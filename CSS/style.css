@@ -825,6 +825,16 @@ p {
     .gallery__inner {
         width: 50%;
     }
+
+    /* Miniatures */
+
+    .video {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
     
     /* Form submit */
     
