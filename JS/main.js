@@ -1,4 +1,4 @@
-/* добавление класса .black шапке сайта при скролле вниз */
+/* add class header__black */
 
 const header = document.querySelector ("header");
 
@@ -10,11 +10,10 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.remove('black');
     }
-     
-    console.log(scrollPos)   
+  
 });
 
-/* выпадающее меню */
+/* Burger */
 
 const burger = document.querySelector (".burger");
 const dropMenu = document.querySelector (".hobby__nav")
@@ -24,7 +23,7 @@ const dropMenu = document.querySelector (".hobby__nav")
      dropMenu.classList.toggle('_active');
 });
 
-/* Меню Навигации */
+/* Menu Navigation */
 
 const menuLinks = document.querySelectorAll('.nav__link[data-goto]');
 if (menuLinks.length > 0) {
@@ -51,9 +50,30 @@ if (menuLinks.length > 0) {
 /* Slider */
 
 document.addEventListener('DOMContentLoaded', function () {
-    // инициализация слайдера
-    var slider = new SimpleAdaptiveSlider('.slider', {
+    new SimpleAdaptiveSlider('.slider', {
+      loop: true,
       autoplay: true,
       interval: 5000,
+      swipe: true,
     });
-  });
+});
+
+/* Button show book list */
+
+const btnBook = document.querySelector (".show__book");
+const list = document.querySelector (".books__list")
+
+btnBook.addEventListener ('click' , function () {
+    btnBook.classList.toggle ('_active');
+    list.classList.toggle ('_active');
+});
+
+/* Button show arts */
+
+const btnShow = document.querySelector (".button__show");
+const art = document.querySelector (".gallery__arts");
+
+btnShow.addEventListener ('click', function() {
+    btnShow.classList.toggle('_active');
+    art.classList.toggle('_active');
+});
