@@ -185,12 +185,12 @@ p {
     transition: .1s linear;
 }
 
-.Button--red {
+.Button--yellow {
     background-color: rgb(190, 169, 50);
 }
 
-.Button--red:hover {
-    background-color:#271313;
+.Button--yellow:hover {
+    background-color:#656626;
 }
 
 /* Description
@@ -308,6 +308,7 @@ p {
     width: 25%;
     overflow: hidden;
     cursor: pointer; 
+    border: 1px solid #271e1ed3;
 }
 
 .factions__item:hover .factions__content {
