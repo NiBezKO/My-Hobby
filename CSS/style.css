@@ -651,6 +651,16 @@ p {
     justify-content: space-around;
 }
 
+.video__one {
+    width: 45%;
+    height: 315px;
+}
+
+.video__two {
+    width: 45%;
+    height: 315px;
+}
+
 /* Footer 
 ===============================*/
 
