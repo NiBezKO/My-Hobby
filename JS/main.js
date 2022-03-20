@@ -79,3 +79,4 @@ btnShow.addEventListener ('click', function() {
     btnShow.classList.toggle('_active');
     art.classList.toggle('_active');
 });
+
