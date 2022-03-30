@@ -433,11 +433,21 @@ p {
 }
 
 .books__list {
-    display: none;
+    visibility: hidden;
+    overflow: hidden;
+    opacity: 0;
+    width: 100%;
+    transition: all.5s ease-out;
+    height: 0;  
 }
 
 .books__list._active {
-    display: block;
+    visibility: visible;
+    overflow: hidden;
+    opacity: 1;
+    width: 100%;
+    transition: all .5s ease-out;
+    height: auto;
 }
 
 .books {
