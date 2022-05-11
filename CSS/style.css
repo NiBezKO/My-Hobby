@@ -249,6 +249,10 @@ p {
 	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
+.description-text__inner {
+ overflow: hidden;
+}
+
 .description__text {
     font-family: 'Gothic';
     font-size: 20px;
@@ -259,7 +263,21 @@ p {
     color: black;
     text-align: center;
     font-style: italic;
+    animation-duration: 4s;
+    animation-name: slidein;
 }
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .description__text::before,
 .description__text::after {
@@ -437,7 +455,7 @@ p {
     overflow: hidden;
     opacity: 0;
     width: 100%;
-    transition: all.5s ease-out;
+    transition: all .5s ease-out;
     height: 0;  
 }
 
@@ -627,6 +645,10 @@ p {
 	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
 }
 
+.paint__inner {
+    overflow: hidden;
+}
+
 .paint__information {
     text-align: center;
     margin: 0 0 30px 0;
@@ -636,6 +658,8 @@ p {
     font-weight: 600;
     font-style: italic;
     color: rgb(194, 190, 190);
+    animation-duration: 4s;
+    animation-name: slidein;
 }
 
 .paint__information::before,
@@ -650,7 +674,10 @@ p {
 	border: none;
 	border-bottom: 2px solid #000000;
 	box-shadow: 0 20px 20px -20px rgb(0, 0, 0);
+    
 }
+
+
 
 .paint__title {
     margin: 30px 0;

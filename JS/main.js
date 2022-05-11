@@ -80,3 +80,21 @@ btnShow.addEventListener ('click', function() {
     art.classList.toggle('_active');
 });
 
+/* validate email form */
+
+let btnSubmit = document.querySelector(".button__submit");
+
+btnSubmit.addEventListener('click', function (element) {
+    let chrbeforAt = email.substr(0, email.indexOf('@'));
+    if (!($.trim(email).length > 127)) {
+        if (chrbeforAt.length >= 2) {
+            var re = /^(([^<>()[\]{}'^?\\.,!|//#%*-+=&;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+            return re.test(email);
+        } else {
+            return false;
+        }
+    } else {
+        return false;
+    }
+}); 
+
