@@ -12,7 +12,7 @@ window.addEventListener("scroll", function() {
     } else {
         header.classList.remove('black');
     }
-  
+   
 });
 
 /* Burger */
@@ -82,7 +82,7 @@ btnShow.addEventListener ('click', function() {
 
 /* validate email form */
 
-let btnSubmit = document.querySelector(".button__submit");
+/*let btnSubmit = document.querySelector(".button__submit");
 
 btnSubmit.addEventListener('click', function (element) {
     let chrbeforAt = email.substr(0, email.indexOf('@'));
@@ -96,5 +96,26 @@ btnSubmit.addEventListener('click', function (element) {
     } else {
         return false;
     }
-}); 
+}); */
+
+
+//document.addEventListener ('DomContentLoaded', function () {
+    let animatedBlockOne = document.querySelector (".description-text__inner");
+    let animatedBlockTwo = document.querySelector (".paint__inner");
+    window.addEventListener('scroll', function () {
+        let animetedHeightOne = animatedBlockOne.offsetHeight;
+        let animetedHeightTwo = animatedBlockTwo.offsetHeight;
+        let scrollBlock = window.scrollY;
+
+        if (scrollBlock >= animetedHeightOne   ) {
+            animatedBlockOne.classList.add("_active");
+        }
+
+        if ( scrollBlock >= animetedHeightTwo) {
+            animatedBlockTwo.classList.add("_active");
+        }
+
+        console.log(scrollBlock);
+    });
+//})
 

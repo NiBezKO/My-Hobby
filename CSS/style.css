@@ -250,8 +250,14 @@ p {
 }
 
 .description-text__inner {
- overflow: hidden;
+  overflow: hidden;
+  visibility: hidden;
 }
+
+.description-text__inner._active {
+    
+    visibility: visible;
+  }
 
 .description__text {
     font-family: 'Gothic';
@@ -263,7 +269,7 @@ p {
     color: black;
     text-align: center;
     font-style: italic;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-name: slidein;
 }
 
@@ -647,6 +653,11 @@ p {
 
 .paint__inner {
     overflow: hidden;
+    visibility: hidden;
+}
+
+.paint__inner._active {
+    visibility: visible;
 }
 
 .paint__information {
@@ -658,7 +669,7 @@ p {
     font-weight: 600;
     font-style: italic;
     color: rgb(194, 190, 190);
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-name: slidein;
 }
 
