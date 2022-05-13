@@ -324,6 +324,15 @@ p {
 .factions {
     display: flex;
     flex-wrap: wrap;
+    opacity: 0;
+    transform: Y(0);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.factions._active {
+    opacity: 1;
+    transform: Y(50px);
+    transition: opacity 2s ease-in-out, transform 2s ease-in-out;
 }
    
 .factions__item {

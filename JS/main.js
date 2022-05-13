@@ -102,9 +102,11 @@ btnSubmit.addEventListener('click', function (element) {
 //document.addEventListener ('DomContentLoaded', function () {
     let animatedBlockOne = document.querySelector (".description-text__inner");
     let animatedBlockTwo = document.querySelector (".paint__inner");
+    let animatedFactions = document.querySelector (".factions");
     window.addEventListener('scroll', function () {
         let animetedHeightOne = animatedBlockOne.offsetTop;
         let animetedHeightTwo = animatedBlockTwo.offsetTop;
+        let animetedHeighFactions = animatedFactions.offsetTop;
         const windowCenter = (window.innerHeight / 2) + this.window.scrollY;
 
         if (windowCenter >= animetedHeightOne   ) {
@@ -113,6 +115,10 @@ btnSubmit.addEventListener('click', function (element) {
 
         if ( windowCenter >= animetedHeightTwo) {
             animatedBlockTwo.classList.add("_active");
+        }
+
+        if ( windowCenter >= animetedHeighFactions) {
+            animatedFactions.classList.add("_active");
         }
 
         console.log(windowCenter);
