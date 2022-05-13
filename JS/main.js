@@ -103,19 +103,21 @@ btnSubmit.addEventListener('click', function (element) {
     let animatedBlockOne = document.querySelector (".description-text__inner");
     let animatedBlockTwo = document.querySelector (".paint__inner");
     window.addEventListener('scroll', function () {
-        let animetedHeightOne = animatedBlockOne.offsetHeight;
-        let animetedHeightTwo = animatedBlockTwo.offsetHeight;
-        let scrollBlock = window.scrollY;
+        let animetedHeightOne = animatedBlockOne.offsetTop;
+        let animetedHeightTwo = animatedBlockTwo.offsetTop;
+        const windowCenter = (window.innerHeight / 2) + this.window.scrollY;
 
-        if (scrollBlock >= animetedHeightOne   ) {
+        if (windowCenter >= animetedHeightOne   ) {
             animatedBlockOne.classList.add("_active");
         }
 
-        if ( scrollBlock >= animetedHeightTwo) {
+        if ( windowCenter >= animetedHeightTwo) {
             animatedBlockTwo.classList.add("_active");
         }
 
-        console.log(scrollBlock);
+        console.log(windowCenter);
+        console.log(animetedHeightOne);
+        console.log(animetedHeightTwo);
     });
 //})
 
