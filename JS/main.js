@@ -1,4 +1,16 @@
 
+let introInner = document.querySelector(".intro__inner");
+
+
+
+window.addEventListener ("DOMContentLoaded", () => {
+    introInner.style.opacity = "1";
+    introInner.style.transition = "opacity";
+    introInner.style.transitionDuration = "4s";
+})
+    
+
+
 
 /* add class header__black */
 
@@ -107,7 +119,7 @@ btnSubmit.addEventListener('click', function (element) {
         let animetedHeightOne = animatedBlockOne.offsetTop;
         let animetedHeightTwo = animatedBlockTwo.offsetTop;
         let animetedHeighFactions = animatedFactions.offsetTop;
-        const windowCenter = (window.innerHeight / 2) + this.window.scrollY;
+        const windowCenter = window.innerHeight  + window.scrollY;
 
         if (windowCenter >= animetedHeightOne   ) {
             animatedBlockOne.classList.add("_active");
@@ -121,9 +133,6 @@ btnSubmit.addEventListener('click', function (element) {
             animatedFactions.classList.add("_active");
         }
 
-        console.log(windowCenter);
-        console.log(animetedHeightOne);
-        console.log(animetedHeightTwo);
     });
 //})
 

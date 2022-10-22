@@ -146,6 +146,7 @@ p {
     margin: 0 auto;
     text-align: center;
     z-index: 10;
+    opacity: 0;
 }
 
 .intro__title {
@@ -270,10 +271,10 @@ p {
     text-align: center;
     font-style: italic;
     animation-duration: 6s;
-    animation-name: slidein;
+    animation-name: anime-description;
 }
 
-@keyframes slidein {
+@keyframes anime-description {
     from {
       margin-left: 100%;
       width: 100%;
@@ -342,6 +343,12 @@ p {
     overflow: hidden;
     cursor: pointer; 
     border: 1px solid #271e1ed3;
+
+}
+
+.factions__item:hover {
+    transform-origin: top;
+    transform: scaleY(1.1) ;
 }
 
 .factions__item:hover .factions__content {
@@ -679,8 +686,20 @@ p {
     font-style: italic;
     color: rgb(194, 190, 190);
     animation-duration: 6s;
-    animation-name: slidein;
+    animation-name: anime-information;
 }
+
+@keyframes anime-information {
+    from {
+      margin-left: 100%;
+      width: 100%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .paint__information::before,
 .paint__information::after {
